@@ -89,6 +89,8 @@ img {
     border:1px solid #4214ac;
     width: 300px;
     height: 80px;
+    display: flex;
+    justify-content: space-between;
 }
 .buy-button{
     
@@ -99,4 +101,8 @@ img {
     border-radius: 5px;
     transition: all ease-in-out .4s;
     /* cursor: pointer; */
+}
+.content-bloc{
+    width: 150px;
+    height: 100%;
 }

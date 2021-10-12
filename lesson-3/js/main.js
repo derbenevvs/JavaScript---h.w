@@ -80,10 +80,9 @@ console.log(list.allProducts);
 
 
 class basket {
-    constructor(productBuy = ".buy-contener") {
-        this.productBuy = productBuy;
+    constructor(productBuyNew = ".buy-contener") {
+        this.productBuyNew = productBuyNew;
         this.goodsBuy = [];
-
     }
 }
 
@@ -91,17 +90,22 @@ let buyContener = document.createElement("div");
 buyContener.classList.add("buy-contener");
 document.body.insertBefore(buyContener, null);
 
-fetch("https://raw.githubusercontent.com/GeekBrainsTutorial/online-store-api/master/responses/getBasket.json")
-    .then(text => text.json())
-    .then(contents => {
-        console.log(contents.contents[0].product_name);
-    });
+
 
 function buy() {
+    fetch("https://raw.githubusercontent.com/GeekBrainsTutorial/online-store-api/master/responses/getBasket.json")
+        .then(text => text.json())
+        .then(contents => {
+            console.log(contents.contents[0].product_name);
+        });
     let productBuyNew = document.createElement("div");
     let buttonDel = document.createElement("button");
+    let contentBloc = document.createElement("div");
+    contentBloc.classList.add("content-bloc")
     buttonDel.classList.add("buy-button");
+
     productBuyNew.insertBefore(buttonDel, null);
+    productBuyNew.insertBefore(contentBloc, buttonDel);
     buttonDel.insertAdjacentHTML('afterbegin', `<h3>Удалить</h3>`);
     buttonDel.onclick = function () {
         buyContener.removeChild(productBuyNew);
@@ -109,8 +113,8 @@ function buy() {
 
     productBuyNew.classList.add("buy-product");
     buyContener.insertBefore(productBuyNew, null);
-    productBuyNew.insertAdjacentHTML('afterbegin', `<h3></h3>`);
-    console.log(buyContener);
+    // contentBloc.insertAdjacentHTML('afterbegin', `<h3>${contents.contents[0].product_name}</h3>`);
+    // console.log(buyContener);
 
 };
 
