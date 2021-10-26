@@ -1,0 +1,26 @@
+[
+  {
+    "id_product": 124,
+    "product_name": "Lorem ipsum dolor",
+    "price": 52.00,
+    "img": "img/Rectangle 15 copy.png",
+  },
+  {
+    "id_product": 457,
+    "product_name": "Lorem ipsum dolor",
+    "price": 55.00,
+    "img": "img/Image.png"
+  },
+  {
+    "id_product": 123,
+    "product_name": "Lorem ipsum dolor",
+    "price": 45.05,
+    "img": "img/Rectangle 15 copy (2).png"
+  },
+  {
+    "id_product": 456,
+    "product_name": "Lorem ipsum dolor",
+    "price": 45.05,
+    "img": "img/Image (1).png"
+  }
+]
