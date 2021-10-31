@@ -40,14 +40,7 @@ Vue.component('products', {
         </a>
     </div>
 </div>
-    // <div class="products">
-    //             <product v-for="item of filtered" 
-    //             :key="item.id_product" 
-    //             :img="imgProduct"
-    //             :product="item"
-    //             @add-product="$parent.$refs.cart.addProduct"></product>
-    //            </div>
-               `
+      `
 });
 Vue.component('product', {
     props: ['product'],
@@ -71,15 +64,5 @@ Vue.component('product', {
         </a>
     </div>
 </div>
-
-
-            // <div class="product-item">
-            //     <img :src="img" alt="Some img">
-            //     <div class="desc">
-            //         <h3>{{product.product_name}}</h3>
-            //         <p>{{product.price}}</p>
-            //         <button class="buy-btn" @click="$emit('add-product', product)">Купить</button>
-            //     </div>
-            // </div>
     `
 })
